@@ -1,0 +1,209 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="title">Cadastre-se!</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form 
+        action="#" 
+        id="main-form"
+        class="batata" 
+        (ngSubmit)="submit1()"
+        [formGroup]="personalData"
+        #form1="ngForm"
+        >
+        <div class="form-row">
+
+          <mat-form-field appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input
+            type="text" 
+            matInput 
+            placeholder="Seu nome..."
+            formControlName = "name1"
+            autocomplete="false"
+            #inputName1
+            >
+            <mat-error>
+              <span *ngIf="personalData.controls['name1'].getError('required')">
+                Este campo é obrigatório!                
+              </span>
+              <span *ngIf="personalData.controls['name1'].getError('minlength')">
+                Você não colocou a quantidade de caracteres mínimos (3)            
+              </span>
+            </mat-error>
+          </mat-form-field>
+            
+
+
+          <mat-form-field appearance="fill">
+            <mat-label>Sobrenome</mat-label>
+            <input 
+            type="text" 
+            matInput 
+            placeholder="Seu sobrenome..."
+            formControlName = "lastname1"
+            autocomplete="false"
+            #inputLastname1
+            ><mat-error>
+              <span *ngIf="personalData.controls['lastname1'].getError('required')">
+                Este campo é obrigatório!                
+              </span>
+              <span *ngIf="personalData.controls['lastname1'].getError('minlength')">
+                Você não colocou a quantidade de caracteres mínimos (3)             
+              </span>
+            </mat-error>          
+          </mat-form-field>
+
+
+            <mat-form-field appearance="fill">
+              <mat-label>Username</mat-label>
+              <input 
+              type="text" 
+              matInput 
+              placeholder="Seu nome de usuário..."
+              formControlName = "username1"
+              autocomplete="false"
+              #inputUsername1
+              ><mat-error>
+                <span *ngIf="personalData.controls['username1'].getError('required')">
+                  Este campo é obrigatório!                
+                </span>
+                <span *ngIf="personalData.controls['username1'].getError('minlength')">
+                  Você não colocou a quantidade de caracteres mínimos (3)            
+                </span>
+              </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill">
+              <mat-label>CPF</mat-label>
+              <input 
+              type="text" 
+              matInput 
+              placeholder="Seu cpf..."
+              formControlName = "cpf1"
+              autocomplete="false"
+              #inputCpf1
+              ><mat-error>
+                <span *ngIf="personalData.controls['cpf1'].getError('required')">
+                  Este campo é obrigatório!                
+                </span>
+                <span *ngIf="personalData.controls['cpf1'].getError('minlength')">
+                  Você não colocou a quantidade de caracteres mínimos (11)            
+                </span>
+              </mat-error>
+            </mat-form-field>
+
+              <mat-form-field appearance="fill">
+              <mat-label>Telefone</mat-label>
+              <input 
+              type="text" 
+              matInput 
+              placeholder="Seu número de telefone..."
+              formControlName = "telefone1"
+              autocomplete="false"
+              #inputTelefone1
+              ><mat-error>
+                <span *ngIf="personalData.controls['telefone1'].getError('required')">
+                  Este campo é obrigatório!                
+                </span>
+                <span *ngIf="personalData.controls['telefone1'].getError('minlength')">
+                  Você não colocou a quantidade de caracteres mínimos (11)             
+                </span>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Endereço</mat-label>
+              <input 
+              type="text" 
+              matInput 
+              placeholder="Seu endereço..."
+              formControlName = "endereco1"
+              autocomplete="false"
+              #inputEndereco1
+              ><mat-error>
+                <span *ngIf="personalData.controls['endereco1'].getError('required')">
+                  Este campo é obrigatório!                
+                </span>
+                <span *ngIf="personalData.controls['endereco1'].getError('minlength')">
+                  Você não colocou a quantidade de caracteres mínimos (11)            
+                </span>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Complemento</mat-label>
+              <input 
+              type="text" 
+              matInput 
+              placeholder="Complemento..."
+              formControlName = "complemento1"
+              autocomplete="false"
+              #inputComplemento1
+              ><mat-error>
+                <span *ngIf="personalData.controls['complemento1'].getError('required')">
+                  Este campo é obrigatório!                
+                </span>
+                <span *ngIf="personalData.controls['complemento1'].getError('minlength')">
+                  Você não colocou a quantidade de caracteres mínimos (3)            
+                </span>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Senha</mat-label>
+              <input 
+              type="password" 
+              matInput 
+              placeholder="Sua senha..."
+              formControlName = "senha1"
+              autocomplete="false"
+              #inputSenha1
+              ><mat-error>
+                <span *ngIf="personalData.controls['senha1'].getError('required')">
+                  Este campo é obrigatório!                
+                </span>
+                <span *ngIf="personalData.controls['senha1'].getError('minlength')">
+                  Você não colocou a quantidade de caracteres mínimos (8)            
+                </span>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Confirmar senha</mat-label>
+              <input 
+              type="password" 
+              matInput 
+              placeholder="Confirme sua senha..."
+              formControlName = "confirmarsenha1"
+              autocomplete="false"
+              #inputConfirmarSenha1
+              ><mat-error>
+                <span *ngIf="personalData.controls['confirmarsenha1'].getError('required')">
+                  Este campo é obrigatório!                
+                </span>
+                <span *ngIf="personalData.controls['confirmarsenha1'].getError('minlength')">
+                  Você não colocou a quantidade de caracteres mínimos (8)             
+                </span>
+              </mat-error>
+            </mat-form-field>
+
+            <span *ngIf="data.senha != data.confirmarsenha" class="error">
+              As senha devem ser iguais!!!
+            </span>
+
+
+          <div class="form-row col">
+              <button mat-raised-button type="submit" color="accent" class="grow" 
+              [disabled]="personalData.invalid" [disabled]="form1.invalid || compararSenha(personalData.controls['senha1'].value,personalData.controls['confirmarsenha1'])"
+              >Cadastrar</button>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- [disabled]="inputName1.oninvalid || inputLastname1.oninvalid || inputUsername1.oninvalid || inputCpf1.oninvalid ||
+              inputTelefone1.oninvalid || inputEndereco1.oninvalid || inputComplemento1.oninvalid || inputSenha1.oninvalid ||
+              inputConfirmarSenha1.oninvalid" -->
